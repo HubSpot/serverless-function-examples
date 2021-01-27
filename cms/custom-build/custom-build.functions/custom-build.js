@@ -1,10 +1,11 @@
-// dayjs can be required in because it has been added to package.json
+// faker can be required in because it has been added to package.json
 // and `hs functions deploy <pathToCustomBuildDotFunctionsFolder>` has been run
-const dayjs = require('dayjs')
+const faker = require('faker');
 
 exports.main = (functionContext, sendResponse) => {
   sendResponse({ body: {
-    // Time is in GMT
-    oneWeekFromNow: dayjs().add('1', 'week').format('MM-DD-YYYY hh:mm:ssA')
+    name: faker.name.findName(),
+    email: faker.internet.email(),
+    contactCard: faker.helpers.createCard()
   }, statusCode: 200 });
 };
