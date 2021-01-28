@@ -1,7 +1,7 @@
 const frisby = require('frisby');
 
-beforeAll(function () {
-  frisby.addExpectHandler('hasCorrectProperties', function (response) {
+beforeAll(() => {
+  frisby.addExpectHandler('hasCorrectProperties', (response) => {
     let json = JSON.parse(response.body);
 
     expect(json.name).toEqual(expect.any(String));
@@ -10,16 +10,16 @@ beforeAll(function () {
   });
 });
 
-it('should return a 200', function () {
+it('should return a 200', () => {
   return frisby.get('http://localhost:5432/_hcms/api/custom-build')
     .expect('status', 200);
 });
 
-it('should return the proper data shape', function () {
+it('should return the proper data shape', () => {
   return frisby.get('http://localhost:5432/_hcms/api/custom-build')
     .expect('hasCorrectProperties');
 });
 
-afterAll(function () {
+afterAll(() => {
   frisby.removeExpectHandler('hasCorrectProperties');
 });
