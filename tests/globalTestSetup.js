@@ -8,6 +8,7 @@ global.beforeEach(async () => {
     path: testPath.split('/').slice(0, -1).join('/'),
     port: 5432
   });
+  console.log('currentServer: ', currentServer)
 });
 
 // Cleanup after running the test
