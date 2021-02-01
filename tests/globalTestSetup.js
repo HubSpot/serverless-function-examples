@@ -12,5 +12,5 @@ global.beforeEach(async () => {
 
 // Cleanup after running the test
 global.afterEach(async () => {
-   await currentServer.exit();
+  await currentServer.exit();
 });
