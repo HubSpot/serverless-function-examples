@@ -4,7 +4,7 @@
   "description": "A collection of serverless function examples for use with HubSpot.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
