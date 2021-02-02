@@ -8,4 +8,3 @@ Serverless functions provide a way to write server-side code that interacts with
 Serverless functions were introduced in April 2020 and functionality has been expanded since then to allow custom packages, local testing, and greater visibility into logs to simplify development. Currently, we have serverless function examples that can interact with the following areas of HubSpot:
 
 - [CMS](cms)
-- [CRM Extensions](crm-extensions)
