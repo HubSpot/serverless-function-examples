@@ -17,6 +17,3 @@ Tests can also be run locally using `npm run test`.
 To add tests:
 - Add a test file with the extension `.test.js` in your `.functions` folder that includes your expectations using jest/jasmine ([Example hello-world Test](cms/hello-world/hello-world.functions/hello-world.test.js))
 - The serverless function will be run within the github action using the [tests/globalTestSetup.js config](tests/globalTestSetup.js) which utilizes the [serverless-dev-runtime package](https://www.npmjs.com/package/@hubspot/serverless-dev-runtime) to run the example functions
-
-## Who to Notify
-@HubSpot/cms-developer-experience
