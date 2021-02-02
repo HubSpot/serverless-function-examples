@@ -8,3 +8,15 @@ Serverless functions provide a way to write server-side code that interacts with
 Serverless functions were introduced in April 2020 and functionality has been expanded since then to allow custom packages, local testing, and greater visibility into logs to simplify development. Currently, we have serverless function examples that can interact with the following areas of HubSpot:
 
 - [CMS](cms)
+
+### Testing Functions
+Tests are run by the [test-examples github action](https://github.com/HubSpot/serverless-function-examples/actions?query=workflow%3Atest-examples) on `push`.
+
+Tests can also be run locally using `npm run test`.
+
+To add tests:
+- Add a test file with the extension `.test.js` in your `.functions` folder that includes your expectations using jest/jasmine ([Example hello-world Test](cms/hello-world/hello-world.functions/hello-world.test.js))
+- The serverless function will be run within the github action using the [tests/globalTestSetup.js config](tests/globalTestSetup.js) which utilizes the [serverless-dev-runtime package](https://www.npmjs.com/package/@hubspot/serverless-dev-runtime) to run the example functions
+
+## Who to Notify
+@HubSpot/cms-developer-experience
