@@ -1,0 +1,47 @@
+{
+  "name": "missions",
+  "useForPages": true,
+  "label": "Missions",
+  "allowChildTables": false,
+  "allowPublicApiAccess": true,
+  "dynamicMetaTags": {},
+  "enableChildTablePages": false,
+  "columns": [
+    {
+      "name": "target",
+      "label": "Tame",
+      "type": "TEXT"
+    },
+    {
+      "name": "planet",
+      "label": "Planet",
+      "type": "TEXT"
+    },
+    {
+      "name": "area",
+      "label": "Area",
+      "type": "TEXT"
+    },
+    {
+      "name": "started",
+      "label": "Started",
+      "type": "TEXT"
+    },
+    {
+      "name": "timeLimit",
+      "label": "Time Limit",
+      "type": "TEXT"
+    },
+    {
+      "name": "reward",
+      "label": "Reward",
+      "type": "TEXT"
+    },
+    {
+      "name": "isNew",
+      "label": "Is New",
+      "type": "BOOLEAN"
+    }
+  ],
+  "rows": []
+}
