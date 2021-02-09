@@ -1,0 +1,20 @@
+{
+  "runtime": "nodejs12.x",
+  "version": "1.0",
+  "environment": {},
+  "secrets": ["APIKEY", "HUBDB_TABLE_NAME"],
+  "endpoints": {
+    "mission": {
+      "method": ["GET"],
+      "file": "endpoints/mission.js",
+      "environment": {
+        "MISSION_DAYS": "7",
+        "BOUNTY": "1000 credits"
+      }
+    },
+    "complete": {
+      "method": ["POST"],
+      "file": "endpoints/complete.js"
+    }
+  }
+}
