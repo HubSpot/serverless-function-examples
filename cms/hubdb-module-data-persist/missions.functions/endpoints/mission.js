@@ -6,8 +6,7 @@ const axios = require('axios');
 const dayjs = require('dayjs');
 var relativeTime = require('dayjs/plugin/relativeTime');
 dayjs.extend(relativeTime);
-
-const { BOUNTY, MISSION_DAYS, HUBDB_TABLE_NAME } = process.env;
+const { APIKEY, BOUNTY, MISSION_DAYS, HUBDB_TABLE_NAME } = process.env;
 const HUBDB_API = `https://api.hubspot.com/cms/v3/hubdb`;
 const rewards = ['Beskar', 'Coaxium', 'Kyber Crystal', BOUNTY];
 
@@ -93,10 +92,9 @@ const publishMissions = async options => {
 };
 
 exports.main = async (
-  { secrets, params, limits, body, headers, contact, accountId },
+  { params, limits, body, headers, contact, accountId },
   sendResponse
 ) => {
-  const { APIKEY } = secrets;
   const requestOptions = {
     portalId: accountId,
     hapikey: APIKEY,

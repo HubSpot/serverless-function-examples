@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const { HUBDB_TABLE_NAME } = process.env;
+const { APIKEY, HUBDB_TABLE_NAME } = process.env;
 const HUBDB_API = `https://api.hubspot.com/cms/v3/hubdb`;
 
 const deleteMission = async (id, options) => {
@@ -19,13 +19,12 @@ const publishMissions = async options => {
 };
 
 exports.main = async (
-  { secrets, params, limits, body, headers, contact, accountId },
+  { params, limits, body, headers, contact, accountId },
   sendResponse
 ) => {
   const {
     mission: { id },
   } = body;
-  const { APIKEY } = secrets;
   const requestOptions = {
     portalId: accountId,
     hapikey: APIKEY,
