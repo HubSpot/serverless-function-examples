@@ -1,0 +1,11 @@
+{
+  "runtime": "nodejs12.x",
+  "version": "1.0",
+  "environment": {},
+  "endpoints": {
+    "unauthed-api-call": {
+      "method": "GET",
+      "file": "getRandomCharacter.js"
+    }
+  }
+}

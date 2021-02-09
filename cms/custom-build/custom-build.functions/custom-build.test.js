@@ -3,7 +3,7 @@ const frisby = require('frisby');
 describe('custom-build', () => {
   beforeAll(() => {
     frisby.addExpectHandler('hasCorrectProperties', (response) => {
-      let json = JSON.parse(response.body);
+      const json = JSON.parse(response.body);
 
       expect(json.name).toEqual(expect.any(String));
       expect(json.email).toEqual(expect.any(String));
