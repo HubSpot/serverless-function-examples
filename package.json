@@ -29,7 +29,8 @@
   "jest": {
     "setupFilesAfterEnv": [
       "<rootDir>/tests/globalTestSetup.js"
-    ]
+    ],
+    "testTimeout": 20000
   },
   "dependencies": {}
 }
